@@ -1,0 +1,263 @@
+.block-login {
+  width: 100%;
+
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666666;
+    font-size: 16px;
+  }
+
+  &__form-img {
+    width: 30px;
+    max-height: 30px;
+    margin-right: 12px;
+    margin-top: 5px;
+  }
+}
+
+.block-login__form-input {
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  border: none;
+  border-bottom: 2px solid #cacaca;
+  border-radius: 0;
+  padding: 0 0 10px;
+  caret-color: #2abb9b;
+  outline: none;
+  width: 100%;
+
+}
+
+.block-login__form-div {
+  display: flex;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.block-login__form-input_div {
+  width: 80%;
+}
+
+.block-login__h {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+.block-login__form__btn{
+  margin: 0 auto;
+  text-align: center;
+}
+.btn{
+  font-weight: 700;
+  text-decoration: none;
+  padding: 20px 60px;
+  min-width: 120px;
+  color: #fff;
+  background-color: #2abb9b;
+  font-size: 16px;
+  border-radius: 100px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  max-width: 340px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+
+}
+button:disabled {
+  color: #fff;
+  background-color: #e4e4e4;
+  cursor: not-allowed;
+}
+
+.block-login__pass{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.block-login__pass-link{
+  font-size: 12px;
+  font-weight: 600;
+  color: #2abb9b;
+  text-decoration: none;
+  transition: .3s;
+  cursor: pointer;
+}
+.block-login__pass-link:hover{
+  color: rgba(24, 115, 96, 0.99);
+}
+
+.block-login__text{
+  font-weight: 600;
+  text-align: center;
+  font-size: 11px;
+  color: #666666;
+
+}
+.block-login__text-link{
+  text-decoration: none;
+  color: #2abb9b;
+
+}
+.block-login__text-link:hover{
+  color: rgba(24, 115, 96, 0.99);
+}
+
+.block-login__h-span{
+  color: #2abb9b;
+}
+
+input{
+  &.ng-invalid.ng-touched{
+    border-bottom: 2px solid red;
+  }
+  &.ng-valid.ng-touched{
+    border-bottom: 2px solid #2abb9b;
+  }
+}
+
+.block-login_validation{
+  color: red;
+  text-align: right;
+  font-size: 20px;
+}
+
+@media (min-width: 481px) {
+  .block-login {
+    width: 100%;
+
+    &__form {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #666666;
+      font-size: 20px;
+
+    }
+
+    &__form-img {
+      width: 30px;
+      max-height: 30px;
+      margin-right: 12px;
+      margin-top: 5px;
+    }
+  }
+
+  .block-login__form-input {
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    border-bottom: 2px solid #cacaca;
+    border-radius: 0;
+    padding: 0 0 10px;
+    caret-color: #2abb9b;
+    outline: none;
+    width: 100%;
+
+  }
+  //.block-login__form-input:hover{
+  //  border-bottom: 2px solid #8d8d8d;
+  //}
+  .block-login__form-div {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .block-login__form-input_div {
+    width: 100%;
+  }
+
+  .block-login__h {
+    text-align: center;
+    padding-top: 48px;
+    margin-bottom: 40px;
+  }
+  .block-login__form__btn{
+    margin: 0 auto;
+    text-align: center;
+  }
+  .btn{
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px 60px;
+    min-width: 120px;
+    color: #fff;
+    background-color: #2abb9b;
+    font-size: 18px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    max-width: 340px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+
+  }
+  button:disabled {
+    color: #fff;
+    background-color: #e4e4e4;
+    cursor: not-allowed;
+  }
+
+  .block-login__pass{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .block-login__pass-link{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2abb9b;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+  }
+  .block-login__pass-link:hover{
+    color: rgba(24, 115, 96, 0.99);
+  }
+
+  .block-login__text{
+    font-weight: 600;
+    text-align: center;
+    font-size: 15px;
+    color: #666666;
+
+  }
+  .block-login__text-link{
+    text-decoration: none;
+    color: #2abb9b;
+
+  }
+  .block-login__text-link:hover{
+    color: rgba(24, 115, 96, 0.99);
+  }
+
+  .block-login__h-span{
+    color: #2abb9b;
+  }
+
+  input{
+    &.ng-invalid.ng-touched{
+      border-bottom: 2px solid red;
+    }
+    &.ng-valid.ng-touched{
+      border-bottom: 2px solid #2abb9b;
+    }
+  }
+
+  .block-login_validation{
+    color: red;
+    text-align: right;
+    font-size: 20px;
+  }
+}

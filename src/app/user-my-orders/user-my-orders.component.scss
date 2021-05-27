@@ -1,0 +1,124 @@
+.div{
+  border-radius: 10px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 1vw;
+  background: #23b6c9;
+  color: #fff;
+  font-size: 7px;
+  line-height: 7px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr 2fr 2fr 1fr;
+
+}
+.div2{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1vw;
+  padding: 1vw;
+}
+
+.steps {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  margin: 1em auto;
+  border: .2em solid mediumturquoise;
+  border-radius: 50%;
+  font-size: 1.2em;
+}
+.steps:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: .1em;
+  height: 2.1em;
+  left: 2.5em;
+  top: .4em;
+  background: mediumturquoise;
+  animation: timing 60s infinite steps(60);
+  transform-origin: 0 2.1em;
+}
+
+@keyframes timing {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.btn{
+  font-weight: 300;
+  padding: 5px 5px;
+  color: #fff;
+  background-color: #bb2a2a;
+  font-size: 8px;
+  border-radius: 90px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  outline: none;
+}
+
+@media (min-width: 481px) {
+  .div{
+    border-radius: 10px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 1vw;
+    background: #23b6c9;
+    color: #fff;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr 2fr 2fr 1fr;
+
+  }
+  .div2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1vw;
+    padding: 1vw;
+  }
+
+  .steps {
+    position: relative;
+    width: 5em;
+    height: 5em;
+    margin: 1em auto;
+    border: .2em solid mediumturquoise;
+    border-radius: 50%;
+    font-size: 1.2em;
+  }
+  .steps:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: .1em;
+    height: 2.1em;
+    left: 2.5em;
+    top: .4em;
+    background: mediumturquoise;
+    animation: timing 60s infinite steps(60);
+    transform-origin: 0 2.1em;
+  }
+
+  @keyframes timing {
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  .btn{
+    font-weight: 700;
+    padding: 7px 7px;
+    color: #fff;
+    background-color: #bb2a2a;
+    font-size: 12px;
+    border-radius: 90px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    outline: none;
+  }
+}

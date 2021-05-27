@@ -1,0 +1,62 @@
+<div class="user-form-offers">
+  <form class="user-form-offers__form" [formGroup]="form" (ngSubmit)="submit()">
+    <h2 class="user-form-offers__header">Залишити скаргу чи пропозицію</h2>
+
+
+    <div class="user-form-offers__form-input_div">
+      <label class="user-form-offers__form-label" for="name">Введіть ім'я:</label>
+      <input id="name" type="name" autocomplete="off" class="user-form-offers__form-input"
+             formControlName="name">
+    </div>
+    <div
+      *ngIf="form.get('name').invalid && form.get('name').touched"
+      class="block-login_validation">
+      <small *ngIf="form.get('name').errors.required">
+        Поле ім'я не може бути пустим.
+      </small>
+      <small *ngIf="form.get('name').errors.minlength">
+        Довжина поля не повинна бути меншою {{form.get('name').errors.minlength.requiredLength}} символів.
+      </small>
+    </div>
+
+
+    <div class="user-form-offers__form-input_div">
+      <label class="user-form-offers__form-label" for="email">Введіть email:</label>
+      <input id="email" type="email" autocomplete="off" class="user-form-offers__form-input"
+             formControlName="email">
+    </div>
+    <div
+      *ngIf="form.get('email').invalid && form.get('email').touched"
+      class="block-login_validation">
+      <small *ngIf="form.get('email').errors.required">
+        Поле email не може бути пустим.
+      </small>
+      <small *ngIf="form.get('email').errors.email">
+        Введіть коректний email.
+      </small>
+    </div>
+
+
+    <div class="user-form-offers__form-input_div">
+      <label class="user-form-offers__form-label" for="message">Введіть повідомлення:</label>
+      <textarea class="user-form-offers__form-input" id="message" name="message" rows="5"
+                required="required" formControlName="message"></textarea>
+    </div>
+    <div
+      *ngIf="form.get('message').invalid && form.get('message').touched"
+      class="block-login_validation">
+      <small *ngIf="form.get('message').errors.required">
+        Поле повідомлення не може бути пустим.
+      </small>
+    </div>
+
+    <button class="user-form-offers__btn"
+            type="submit"
+            [disabled]="form.invalid"
+    > Відправити повідомлення
+    </button>
+  </form>
+</div>
+
+
+

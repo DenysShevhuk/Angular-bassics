@@ -1,0 +1,56 @@
+<app-user-header></app-user-header>
+<div class="container-user">
+
+
+  <div class="block-btn">
+    <div class="text">
+      <span class="span-block">------ Вітаємо в нашій команді</span>
+      <h2 class="text-header">
+        <span>Успішні проєкти</span>
+        <span>створюють тільки команди</span>
+      </h2>
+    </div>
+
+
+    <div class="div_btn" (click)="toTop()">
+      <div [routerLink]="['/user', 'make-order']" class="a c" routerLinkActive="active" >
+        <span class="b" >Оформити замовлення </span>
+      </div>
+      <div [routerLink]="['/user', 'my-order']" class="a q" routerLinkActive="active" >
+      <span class="b">Мої замовлення <span
+        class="btn-span">{{posts.length}}</span></span>
+      </div>
+      <div [routerLink]="['/user', 'make-order']" class="a d" routerLinkActive="active" >
+        <span class="b">Зароблені кошти </span>
+      </div>
+      <div [routerLink]="['/user', 'make-order']" class="a t" routerLinkActive="active" >
+        <span class="b">Новини компанії </span>
+      </div>
+      <div [routerLink]="['/user', 'offers']" class="a j" routerLinkActive="active" >
+        <span class="b">Скарги та пропозиції</span>
+      </div>
+    </div>
+    <div [routerLink]="['/user', 'make-order']" class="l v" routerLinkActive="active" >
+      <span class="b">Green utilization</span>
+    </div>
+
+  </div>
+  <div class="container-user-header__text">
+    <router-outlet></router-outlet>
+  </div>
+
+
+  <div class="container-user-header">
+    <div class="container-user-header__div">
+      <div class="container-user-header__padding">
+        <div>
+          <app-time></app-time>
+        </div>
+      </div>
+      Розвиваємо Green utilization разом!
+    </div>
+  </div>
+
+
+</div>
+<app-footer></app-footer>

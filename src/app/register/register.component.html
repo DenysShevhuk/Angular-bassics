@@ -1,0 +1,82 @@
+<app-header></app-header>
+<div class="block-registration">
+  <div class="block-registration__form">
+    <div class="block-registration__header">
+      <h2>Зареєструватися в <span class="block-registration__header-span">Gr</span>een <span
+        class="block-registration__header-span">ut</span>ilization.
+      </h2>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="block-registration__form-div">
+        <img class="block-registration__form-img"
+             src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/glyphs/person.svg">
+
+        <div class="block-registration__form-input_div">
+          <input type="name" autocomplete="off" class="block-registration__form-input" placeholder="Ім'я"
+                 formControlName="name">
+        </div>
+      </div>
+      <div
+        *ngIf="form.get('name').invalid && form.get('name').touched"
+        class="block-login_validation">
+        <small *ngIf="form.get('name').errors.required">
+          Поле ім'я не може бути пустим.
+        </small>
+        <small *ngIf="form.get('name').errors.minlength">
+          Довжина поля не повинна бути меншою {{form.get('name').errors.minlength.requiredLength}} символів.
+        </small>
+      </div>
+      <div class="block-registration__form-div">
+        <img class="block-registration__form-img"
+             src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/glyphs/letter.svg">
+        <div class="block-registration__form-input_div">
+          <input type="email" autocomplete="off" class="block-registration__form-input" placeholder="Адреса ел. пошти"
+                 formControlName="email">
+        </div>
+      </div>
+      <div
+        *ngIf="form.get('email').invalid && form.get('email').touched"
+        class="block-login_validation">
+        <small *ngIf="form.get('email').errors.required">
+          Поле email не може бути пустим.
+        </small>
+        <small *ngIf="form.get('email').errors.email">
+          Введіть коректний email.
+        </small>
+      </div>
+
+      <div class="block-registration__form-div">
+        <img class="block-registration__form-img"
+             src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/glyphs/lock.svg">
+        <div class="block-registration__form-input_div">
+          <input type="password" autocomplete="off" class="block-registration__form-input" placeholder="Пароль"
+                 formControlName="password">
+        </div>
+      </div>
+      <div
+        *ngIf="form.get('password').invalid && form.get('password').touched"
+        class="block-login_validation">
+        <small *ngIf="form.get('password').errors.required">
+          Пароль не може бути пустим.
+        </small>
+        <small *ngIf="form.get('password').errors.minlength">
+          Довжина паролю не повинна бути меншою {{form.get('password').errors.minlength.requiredLength}} символів.
+        </small>
+      </div>
+      <div class="block-registration__btn">
+        <button type="submit" class="block-registration__btn-submit" [disabled]="form.invalid">Зареєструватися
+        </button>
+      </div>
+    </form>
+    <div class="block-registration__text">
+      Вже зареєстровані в <span class="block-registration__header-span">Gr</span>een <span
+      class="block-registration__header-span">ut</span>ilization?
+      <a [routerLink]="['/login']" class="block-registration__text-link">Увійти.</a></div>
+  </div>
+  <div  class="block-registration__privacy">
+    Реєструючись, ви тим самим приймаєте наші
+    <a [routerLink]="['/login']"  class="block-registration__text-link">Умови обслуговування</a>
+    і
+    <a [routerLink]="['/login']"  class="block-registration__text-link">Політика конфіденційності.</a></div>
+</div>
+<app-footer></app-footer>

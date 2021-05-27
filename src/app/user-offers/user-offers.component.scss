@@ -1,0 +1,50 @@
+.user-form-offers{
+  max-width: 600px;
+  margin: 0 auto;
+  &__form-label{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #495057;
+  }
+  &__header{
+    text-align: center;
+  }
+  &__form-input{
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #495057;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1);
+    outline: none;
+    cursor: pointer;
+  }
+  &__btn{
+    color: rgba(34, 34, 34, 0.99);
+    background-color: #2abb9b;
+    border-color: transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+}
+
+
+.block-login_validation{
+  color: red;
+  text-align: center;
+  font-size: 16px;
+}
+
+button:disabled {
+  color: #fff;
+  background-color: #e4e4e4;
+  cursor: not-allowed;
+}

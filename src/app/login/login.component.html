@@ -1,0 +1,80 @@
+<app-header></app-header>
+<div class="block-login">
+  <div class="block-login__form">
+    <div class="block-login__h">
+      <h2>Увійти до <span class="block-login__h-span">Gr</span>een <span class="block-login__h-span">ut</span>ilization.
+      </h2>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="auth.error$ | async as error">
+      {{error}}
+    </div>
+    <div class="alert alert-info" *ngIf="message">
+      {{message}}
+    </div>
+
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="block-login__form-div">
+        <img class="block-login__form-img"
+             src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/glyphs/letter.svg">
+        <div class="block-login__form-input_div">
+          <label>
+            <input id='email' type="email" autocomplete="off" class="block-login__form-input"
+                   placeholder="Адреса ел. пошти"
+                   formControlName="email" >
+          </label>
+          <div
+            *ngIf="form.get('email').invalid && form.get('email').touched"
+            class="block-login_validation">
+            <small *ngIf="form.get('email').errors.required">
+              Поле email не може бути пустим.
+            </small>
+            <small *ngIf="form.get('email').errors.email">
+              Введіть коректний email.
+            </small>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="block-login__form-div">
+        <img class="block-login__form-img"
+             src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/glyphs/lock.svg">
+
+        <div class="block-login__form-input_div">
+          <label>
+            <input id="password" type="password" autocomplete="off" class="block-login__form-input" placeholder="Пароль"
+                   formControlName="password">
+          </label>
+          <div
+            *ngIf="form.get('password').invalid && form.get('password').touched"
+            class="block-login_validation">
+            <small *ngIf="form.get('password').errors.required">
+              Пароль не може бути пустим.
+            </small>
+            <small *ngIf="form.get('password').errors.minlength">
+              Довжина паролю не повинна бути меншою {{form.get('password').errors.minlength.requiredLength}} символів.
+            </small>
+          </div>
+        </div>
+        <!--        <img data-v-28e4a0cd=""-->
+        <!--             src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/glyphs/eye.svg"-->
+        <!--             data-test-id="text-field-additional-button" alt="clear input"-->
+        <!--             class="text-field__additional-button">-->
+      </div>
+      <div class="block-login__pass">
+        <a href="#" class="block-login__pass-link">Забули пароль?</a>
+      </div>
+      <div class="block-login__form__btn">
+        <button type="submit" class="btn" [disabled]="form.invalid">
+          Увійти
+        </button>
+      </div>
+    </form>
+    <div class="block-login__text">
+      Ще не зареєстровані в <span class="block-login__h-span">Gr</span>een <span class="block-login__h-span">ut</span>ilization?
+      <a [routerLink]="['/registration']" class="block-login__text-link">Зареєструватися.</a></div>
+  </div>
+</div>
+<app-footer></app-footer>

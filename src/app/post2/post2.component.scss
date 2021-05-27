@@ -1,0 +1,60 @@
+.header-menu__button {
+  color: rgba(0, 0, 0, 0.99);
+  background-color: #2abb9b;
+  border-color: transparent;
+  border-radius: 100px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.header-menu__button:hover {
+  background-color: #269d81;
+}
+
+.header-menu__img {
+  width: 15px;
+  padding-right: 4px;
+}
+
+.header-menu__a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.99);
+  padding: 15.5px 20px;
+  display: flex;
+}
+
+@media (min-width: 481px) {
+  .header-menu__button {
+    color: rgba(0, 0, 0, 0.99);
+    background-color: #2abb9b;
+    border-color: transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 8px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    display: flex;
+  }
+
+  .header-menu__button:hover {
+    background-color: #269d81;
+  }
+
+  .header-menu__img {
+    width: 20px;
+    padding-right: 6px;
+  }
+
+  .header-menu__a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.99);
+    padding: 13.5px 20px;
+    display: flex;
+  }
+}

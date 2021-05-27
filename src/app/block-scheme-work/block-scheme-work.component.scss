@@ -1,0 +1,17 @@
+.search{
+  font-family: 'Heebo', sans-serif;
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (min-width: 481px) {
+  .search{
+    font-family: 'Heebo', sans-serif;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 16px;
+  }
+}

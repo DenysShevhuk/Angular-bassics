@@ -1,0 +1,38 @@
+.block-contact {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+
+  &__header {
+    padding-top: 48px;
+    margin-bottom: 40px;
+    color: #666666;
+    font-size: 20px;
+  }
+
+  &__header-span {
+    color: #2abb9b;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__info-svg{
+    width: 80px;
+    margin-right: 40px;
+  }
+
+  &__info-href {
+    text-decoration: none;
+    color: #666666;
+    font-size: 22px;
+
+  }
+}
+
+img {
+  width: 100px;
+  margin-right: 20px;
+
+}

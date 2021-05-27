@@ -1,0 +1,21 @@
+.container{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.container-flex{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2vw;
+
+}
+.container-div{
+  border-radius: 10px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-top: 48px;
+}
+img{
+  width: 100%;
+}

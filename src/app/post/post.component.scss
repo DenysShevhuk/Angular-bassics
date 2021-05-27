@@ -1,0 +1,17 @@
+.post {
+  width: 300px;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+  margin: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,.4);
+
+}
+.post-section{
+ display: inline-block;
+}
+h2 {
+  font-weight: bold;
+  font-style: italic;
+  color: red;
+}

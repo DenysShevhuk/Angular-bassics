@@ -1,0 +1,176 @@
+<div class="container-user-order__block">
+  <!--  <div class="container-user-order__header">-->
+  <!--    <h2>Оформити замовлення</h2>-->
+  <!--  </div>-->
+<div>
+
+
+
+<div class="container-user-order__form"  *ngIf="isVisible ">
+  <form  class="form" [formGroup]="form" (ngSubmit)="submit()" >
+    <span (click)="isVisible = !isVisible" class="close-button"><img
+      src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/close-icon.svg"></span>
+    <div class="container-user-order__info">
+
+      <div class="container-user-order__group"
+           [ngClass]="{invalid: form.get('sender').touched && form.get('sender').invalid}">
+        <input autocomplete="off" class="container-user-order__input" type="text" id="sender" formControlName="sender">
+        <label for="sender" class="container-user-order__label">Відправник<span class="star"> *</span></label>
+        <div *ngIf="form.get('sender').touched && form.get('sender').invalid"
+             class="container-user-order__validation">
+          <small *ngIf="form.get('sender').errors.required">
+            Поле Відправник не може бути пустим.
+          </small>
+        </div>
+      </div>
+
+      <div class="container-user-order__group"
+           [ngClass]="{invalid: form.get('address').touched && form.get('address').invalid}">
+        <input autocomplete="off" id="address" formControlName="address" class="container-user-order__input"
+               type="text">
+        <label class="container-user-order__label">Адреса<span class="star"> *</span></label>
+        <div *ngIf="form.get('address').touched && form.get('address').invalid"
+             class="container-user-order__validation">
+          <small *ngIf="form.get('address').errors.required">
+            Поле Адреса не може бути пустим.
+          </small>
+        </div>
+      </div>
+
+      <div class="container-user-order__group"
+           [ngClass]="{invalid: form.get('contact').touched && form.get('contact').invalid}">
+        <input autocomplete="off" id="contact" formControlName="contact" class="container-user-order__input"
+               type="text">
+        <label class="container-user-order__label">Контактна особа<span class="star"> *</span></label>
+        <div *ngIf="form.get('contact').touched && form.get('contact').invalid"
+             class="container-user-order__validation">
+          <small *ngIf="form.get('contact').errors.required">
+            Поле Контактна особа не може бути пустим.
+          </small>
+        </div>
+      </div>
+
+      <div class="container-user-order__group"
+           [ngClass]="{invalid: form.get('phone').touched && form.get('phone').invalid}">
+        <input autocomplete="off" id="phone" formControlName="phone" class="container-user-order__input"
+               placeholder="380...."
+               type="tel">
+        <label class="container-user-order__label">Телефон<span class="star"> *</span></label>
+        <div *ngIf="form.get('phone').touched && form.get('phone').invalid"
+             class="container-user-order__validation">
+          <small *ngIf="form.get('phone').errors.required">
+            Поле Телефон не може бути пустим.
+          </small>
+          <small *ngIf="form.get('phone').errors.minlength">
+            Довжина паролю не повинна бути меншою {{form.get('phone').errors.minlength.requiredLength}} символів.
+          </small>
+          <small *ngIf="form.get('phone').errors.maxlength">
+            Довжина паролю не повинна бути більшою {{form.get('phone').errors.maxlength.requiredLength}} символів.
+          </small>
+          <small *ngIf="form.get('phone').errors.pattern">
+            Поле повинно містити тільки цифри.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="container-user-order__group"
+           [ngClass]="{invalid: form.get('data').touched && form.get('data').invalid}">
+        <input autocomplete="off" id="data" formControlName="data" class="container-user-order__input"
+               type="datetime-local" value="2021-01-01T08:30">
+        <label class="container-user-order__label">Дата відправки<span class="star"> *</span></label>
+        <div *ngIf="form.get('data').touched && form.get('data').invalid"
+             class="container-user-order__validation">
+          <small *ngIf="form.get('data').errors.required">
+            Поле Контактна особа не може бути пустим.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="container-user-order__group"
+           [ngClass]="{invalid: form.get('weight').touched && form.get('weight').invalid}">
+        <input autocomplete="off" id="weight" formControlName="weight" class="container-user-order__input"
+               type="text" list="defaultTels">
+        <datalist id="defaultTels">
+          <option value="10 кг.">
+          <option value="20 кг.">
+          <option value="30 кг.">
+          <option value="40 кг.">
+          <option value="50 кг.">
+          <option value="60 кг.">
+          <option value="70 кг.">
+          <option value="80 кг.">
+          <option value="90 кг.">
+          <option value="100 кг.">
+        </datalist>
+        <label class="container-user-order__label"> Вкажіть, будь ласка, приблизну вагу замовлення <span
+          class="star"> *</span></label>
+        <div *ngIf="form.get('weight').touched && form.get('weight').invalid"
+             class="container-user-order__validation">
+          <small *ngIf="form.get('weight').errors.required">
+            Поле приблизна вага не може бути пустим.
+          </small>
+        </div>
+      </div>
+
+    </div>
+    <button  type="submit" [disabled]="form.invalid" >Оформити замовлення</button>
+    <button  class="btn" (click)="isVisible = !isVisible" >Закрити</button>
+  </form>
+</div>
+
+</div>
+
+
+
+<div CLASS="div-b3">
+
+  <div class="div-b2">
+
+
+    <div class="div-b1" (click)="isVisible = !isVisible">
+      <img src="https://cdn.riastatic.com/photosnewr/ria/news_common/v-vinnice-budut-shtrafovat-za-nezakonnoe-vybrasyvanie-stroitelnogo-mu__250719-620x0.jpg">
+      <div class="content">
+        <h2>Будівельне сміття</h2>
+      </div>
+    </div>
+
+    <div class="div-b1" (click)="isVisible = !isVisible">
+      <img
+        src="https://irren.com.ua/images/478-3.jpg">
+      <div class="content">
+        <h2>Вивіз відходів плівки</h2>
+
+      </div>
+    </div>
+    <div class="div-b1" (click)="isVisible = !isVisible">
+      <img src="https://pro-consulting.ua/uploads/files/Press%20centr/Inform-digest/1395749677_109657065_3649429_11.jpg">
+      <div class="content">
+        <h2>Вивіз макулатури: папір, книги, картон та ін.</h2>
+
+      </div>
+    </div>
+    <div class="div-b1" (click)="isVisible = !isVisible">
+      <img src="https://s.mind.ua/img/forall/a/201898/54.jpg?1540449345">
+      <div class="content">
+        <h2>Вивіз б/у ПЕТ пляшок</h2>
+
+      </div>
+    </div>
+    <div class="div-b1" (click)="isVisible = !isVisible">
+      <img src="https://c1.wallpaperflare.com/preview/342/740/30/drink-beverage-screw-cork-bottle.jpg">
+      <div class="content">
+        <h2>Вивіз відходів пластику, пластмас</h2>
+
+      </div>
+    </div>
+    <div class="div-b1" (click)="isVisible = !isVisible">
+      <img src="https://goldenpages.rv.ua/uploads/images/2103%20-%20%D0%A3%D0%9A%D0%A0%D0%92%D0%A2%D0%9E%D0%A0%D0%A0%D0%95%D0%A1%D0%A3%D0%A0%D0%A1,%20%D0%9D%D0%92%D0%9F,%20%D0%A2%D0%9E%D0%92/Ukrvtorresurs_2103_08_1000x600.jpg">
+      <div class="content">
+        <h2>Закупівля брухту алюмінієвих банок</h2>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

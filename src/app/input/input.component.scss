@@ -1,0 +1,44 @@
+.block-input {
+  font-family: 'Heebo', sans-serif;
+  max-width: 1120px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px;
+
+  &__header {
+    margin-top: 1vw;
+    font-size: 25px;
+    line-height: 40px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  &__text {
+    color: #666666;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 481px) {
+  .block-input {
+    font-family: 'Heebo', sans-serif;
+    max-width: 1120px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+
+    &__header {
+      margin-top: -4vw;
+      font-size: 36px;
+      line-height: 50px;
+      color: #000;
+      font-weight: 600;
+    }
+
+    &__text {
+      color: #666666;
+      font-size: 16px;
+    }
+  }
+}

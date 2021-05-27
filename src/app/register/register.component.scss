@@ -1,0 +1,225 @@
+.block-registration {
+  text-align: center;
+  width: 100%;
+
+  &__header {
+    padding-top: 40px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #666666;
+  }
+
+  &__header-span {
+    color: #2abb9b;
+  }
+
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666666;
+  }
+
+  &__form-div {
+    display: flex;
+    margin: 20px 0 auto;
+    padding: 0 20px;
+
+  }
+
+  &__form-img {
+    width: 30px;
+    max-height: 30px;
+    margin-right: 12px;
+    margin-top: 5px;
+  }
+
+  &__form-input_div {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__form-input {
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    border-bottom: 2px solid #cacaca;
+    border-radius: 0;
+    padding: 0 0 10px;
+    caret-color: #2abb9b;
+    outline: none;
+    width: 100%;
+  }
+
+  &__btn-submit {
+    font-weight: 700;
+    text-decoration: none;
+    padding: 20px 60px;
+    min-width: 120px;
+    color: #fff;
+    background-color: #2abb9b;
+    font-size: 16px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    max-width: 340px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  &__text{
+    font-weight: 600;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+  }
+  &__text-link{
+    text-decoration: none;
+    color: #2abb9b;
+  }
+  &__privacy{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 40px;
+  }
+}
+button:disabled {
+  color: #fff;
+  background-color: #e4e4e4;
+  cursor: not-allowed;
+}
+
+input{
+  &.ng-invalid.ng-touched{
+    border-bottom: 2px solid red;
+  }
+  &.ng-valid.ng-touched{
+    border-bottom: 2px solid #2abb9b;
+  }
+}
+
+.block-login_validation{
+  color: red;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+@media (min-width: 481px) {
+  .block-registration {
+    text-align: center;
+    width: 100%;
+
+    &__header {
+      padding-top: 48px;
+      margin-bottom: 40px;
+      font-size: 20px;
+      color: #666666;
+    }
+
+    &__header-span {
+      color: #2abb9b;
+    }
+
+    &__form {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #666666;
+    }
+
+    &__form-div {
+      display: flex;
+      margin: 40px 0 auto;
+
+    }
+
+    &__form-img {
+      width: 30px;
+      max-height: 30px;
+      margin-right: 12px;
+      margin-top: 5px;
+    }
+
+    &__form-input_div {
+      width: 100%;
+
+    }
+
+    &__form-input {
+      color: #333;
+      font-size: 18px;
+      font-weight: 300;
+      border: none;
+      border-bottom: 2px solid #cacaca;
+      border-radius: 0;
+      padding: 0 0 10px;
+      caret-color: #2abb9b;
+      outline: none;
+      width: 100%;
+    }
+
+    &__btn-submit {
+      font-weight: 700;
+      text-decoration: none;
+      padding: 20px 60px;
+      min-width: 120px;
+      color: #fff;
+      background-color: #2abb9b;
+      font-size: 18px;
+      border-radius: 100px;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      max-width: 340px;
+      box-sizing: border-box;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    &__text{
+      font-weight: 600;
+      text-align: center;
+      font-size: 15px;
+      color: #666666;
+    }
+    &__text-link{
+      text-decoration: none;
+      color: #2abb9b;
+    }
+    &__privacy{
+      font-size: 12px;
+      text-align: center;
+      padding-top: 40px;
+    }
+  }
+  button:disabled {
+    color: #fff;
+    background-color: #e4e4e4;
+    cursor: not-allowed;
+
+  }
+
+  input{
+    &.ng-invalid.ng-touched{
+      border-bottom: 2px solid red;
+    }
+    &.ng-valid.ng-touched{
+      border-bottom: 2px solid #2abb9b;
+    }
+  }
+
+  .block-login_validation{
+    color: red;
+    text-align: right;
+    font-size: 20px;
+  }
+
+}

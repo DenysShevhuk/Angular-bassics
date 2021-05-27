@@ -1,0 +1,24 @@
+<div *ngIf="posts.length; else loading">
+  <div class="div2">
+    <div class="div" *ngFor="let post of posts">
+      <div> Коли забрати:</div>
+      <div>Де забрати:</div>
+      <div>Контакта особа:</div>
+      <div>Номер телефону:</div>
+      <div>Приблизна вага:</div>
+      <button class="btn" (click)="remove(post.id) "> Вилучити</button>
+      <div>{{ post.data | date: 'short'}} </div>
+      <div>{{ post.address}}</div>
+      <div> {{ post.contact}}</div>
+      <div>{{ post.phone}}</div>
+      <div> {{ post.weight}}</div>
+
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="steps">
+
+  </div>
+</ng-template>

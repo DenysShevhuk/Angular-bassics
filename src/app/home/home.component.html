@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-section-input2></app-section-input2>
+<div class="container">
+  <app-materials
+    *ngFor="let m of materials"
+    [materials]="m"
+  ></app-materials>
+
+  <app-block-conveniently-text></app-block-conveniently-text>
+
+  <app-block-conveniently
+    *ngFor="let c of conveniently"
+    [conveniently]="c">
+  </app-block-conveniently>
+
+  <app-block-scheme-work></app-block-scheme-work>
+  <app-block-scheme-work-text
+    *ngFor="let work of work"
+    [work]="work">
+  </app-block-scheme-work-text>
+  <app-block-partners></app-block-partners>
+  <app-block-partners-card
+    *ngFor="let p of partners"
+    [partners]="p">
+  </app-block-partners-card>
+</div>
+
+<app-footer></app-footer>

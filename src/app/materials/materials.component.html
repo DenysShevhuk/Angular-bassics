@@ -1,0 +1,21 @@
+<section class="materials-section">
+  <div class="materials-section__block">
+    <div class="materials-section__block-post">
+      <img class="materials-section__block-img" (click)="isVisible = !isVisible" src="{{materials.src}}" alt="img">
+      <h2 class="materials-section__block-header">{{materials.title}}</h2>
+    </div>
+
+    <div class="post-div1" *appIfnot="!isVisible">
+      <div class="post-div-div">
+        <span (click)="isVisible = !isVisible" class="close-button"><img
+          src="https://res.cloudinary.com/glovoapp/image/fetch///https://glovoapp.com/images/close-icon.svg"></span>
+        <div class="post-did-did">
+          <img class="materials-section__block-img" (click)="isVisible = !isVisible" src="{{materials.src}}" alt="img">
+          <h2 class="materials-section__block-header">{{materials.title}}</h2>
+          <p class="materials-section__block-text">{{materials.text}}</p>
+          <button  [routerLink]="['/login']"  class="materials-section__btn"><a class="materials-section__href">{{application}}</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
